@@ -1,0 +1,45 @@
+repos:
+
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.2.0
+    hooks:
+    -   id: check-yaml
+    -   id: debug-statements
+    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
+
+#-   repo: https://github.com/pre-commit/pre-commit-hooks
+#    rev: v4.2.0
+#    hooks:
+#    -   id: trailing-whitespace
+
+#-   repo: https://github.com/asottile/pyupgrade
+#    rev: v2.32.1
+#    hooks:
+#    -   id: pyupgrade
+#        args: [--py36-plus]
+
+-   repo: https://github.com/pycqa/flake8
+    rev: 4.0.1
+    hooks:
+        - id: flake8
+          exclude: |
+              (?x)^(
+                utils/lackey/ |
+                demos/ |
+                test/ |
+                docs/ |
+                common_app.py
+              )
+
+-   repo: local
+    hooks:
+    -   id: pylint
+        name: pylint
+        entry: pylint
+        language: system
+        types: [python]
+        args:
+            [
+                "--rcfile=.pylintrc",
+            ]

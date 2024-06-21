@@ -1,0 +1,9 @@
+[flake8]
+exclude = .git,__pycache__,test,lackey,demos,docs
+ignore =
+    # E501 line too long
+    E501,
+    # E402 module level import not at top of file
+    E402,
+    # line break after binary operator
+    W504

@@ -1,0 +1,23 @@
+# IDE
+/.idea/
+../idea/
+.vscode
+
+# Virtualenv
+/venv/
+
+# Cache
+__pycache__
+
+# Debug
+_test.py
+
+# Log
+*.txt
+*.log
+*.log*
+
+# Pyinstaller
+build/
+dist/
+*.spec
